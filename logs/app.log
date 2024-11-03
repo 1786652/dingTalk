@@ -1,0 +1,45 @@
+2024-11-02 21:35:25 INFO  DingTalkApplication - Starting DingTalkApplication using Java 17.0.8 with PID 15620 (D:\项目练习\dingTalk\target\classes started by hp in D:\项目练习\dingTalk)
+2024-11-02 21:35:25 INFO  DingTalkApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 21:35:25 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.activation-api.jar,file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.xml.bind-api.jar
+2024-11-02 21:35:25 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/jaxb-core.jar,file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/angus-activation.jar
+2024-11-02 21:35:25 INFO  DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 21:35:25 INFO  DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-02 21:35:25 WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.dingtalk]' package. Please check your configuration.
+2024-11-02 21:35:26 INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-02 21:35:26 INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 21:35:26 INFO  StandardService - Starting service [Tomcat]
+2024-11-02 21:35:26 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-02 21:35:26 INFO  [/] - Initializing Spring embedded WebApplicationContext
+2024-11-02 21:35:26 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 998 ms
+2024-11-02 21:35:27 INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-11-02 21:35:27 INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-02 21:35:27 INFO  QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-11-02 21:35:27 INFO  RAMJobStore - RAMJobStore initialized.
+2024-11-02 21:35:27 INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-02 21:35:27 INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-02 21:35:27 INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-11-02 21:35:27 INFO  QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@35858bca
+2024-11-02 21:35:27 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-02 21:35:27 INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 21:35:27 INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-02 21:35:27 INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-11-02 21:35:27 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-02 21:35:27 INFO  DingTalkApplication - Started DingTalkApplication in 2.65 seconds (process running for 3.402)
+2024-11-02 21:35:30 INFO  RefreshJob - This is an INFO message
+2024-11-02 21:35:30 WARN  RefreshJob - This is a WARN message
+2024-11-02 21:35:30 ERROR RefreshJob - This is an ERROR message
+2024-11-02 21:35:40 INFO  RefreshJob - This is an INFO message
+2024-11-02 21:35:40 WARN  RefreshJob - This is a WARN message
+2024-11-02 21:35:40 ERROR RefreshJob - This is an ERROR message
+2024-11-02 21:35:43 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-02 21:35:43 INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-11-02 21:35:43 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-02 21:35:43 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-02 21:35:43 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
