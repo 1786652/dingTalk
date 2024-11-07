@@ -43,3 +43,379 @@
 2024-11-02 21:35:43 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
 2024-11-02 21:35:43 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2024-11-02 21:35:43 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-11-07 21:25:46 INFO  DingTalkApplication - Starting DingTalkApplication using Java 17.0.8 with PID 32144 (D:\项目练习\dingTalk\target\classes started by hp in D:\项目练习\dingTalk)
+2024-11-07 21:25:46 INFO  DingTalkApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-07 21:25:46 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.activation-api.jar,file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.xml.bind-api.jar
+2024-11-07 21:25:46 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/jaxb-core.jar,file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/angus-activation.jar
+2024-11-07 21:25:46 INFO  DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-07 21:25:46 INFO  DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-07 21:25:46 WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.dingtalk]' package. Please check your configuration.
+2024-11-07 21:25:47 INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-07 21:25:47 INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:25:47 INFO  StandardService - Starting service [Tomcat]
+2024-11-07 21:25:47 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-07 21:25:47 INFO  [/] - Initializing Spring embedded WebApplicationContext
+2024-11-07 21:25:47 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1192 ms
+2024-11-07 21:25:48 INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-11-07 21:25:48 INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-07 21:25:48 INFO  QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-11-07 21:25:48 INFO  RAMJobStore - RAMJobStore initialized.
+2024-11-07 21:25:48 INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-07 21:25:48 INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-07 21:25:48 INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-11-07 21:25:48 INFO  QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7908be21
+2024-11-07 21:25:48 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-07 21:25:48 INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:25:48 INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-07 21:25:48 INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-11-07 21:25:48 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-07 21:25:48 INFO  DingTalkApplication - Started DingTalkApplication in 3.13 seconds (process running for 6.172)
+2024-11-07 21:25:50 INFO  RefreshJob - This is an INFO message
+2024-11-07 21:25:50 WARN  RefreshJob - This is a WARN message
+2024-11-07 21:25:50 ERROR RefreshJob - This is an ERROR message
+2024-11-07 21:25:54 INFO  [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-07 21:25:54 INFO  DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-07 21:25:54 INFO  DispatcherServlet - Completed initialization in 0 ms
+2024-11-07 21:26:00 INFO  RefreshJob - This is an INFO message
+2024-11-07 21:26:00 WARN  RefreshJob - This is a WARN message
+2024-11-07 21:26:00 ERROR RefreshJob - This is an ERROR message
+2024-11-07 21:26:10 INFO  RefreshJob - This is an INFO message
+2024-11-07 21:26:10 WARN  RefreshJob - This is a WARN message
+2024-11-07 21:26:10 ERROR RefreshJob - This is an ERROR message
+2024-11-07 21:26:20 INFO  RefreshJob - This is an INFO message
+2024-11-07 21:26:20 WARN  RefreshJob - This is a WARN message
+2024-11-07 21:26:20 ERROR RefreshJob - This is an ERROR message
+2024-11-07 21:26:22 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:26:22 INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-11-07 21:26:22 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-07 21:26:22 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:26:22 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-11-07 21:45:05 INFO  DingTalkApplication - Starting DingTalkApplication using Java 17.0.8 with PID 18560 (D:\项目练习\dingTalk\target\classes started by hp in D:\项目练习\dingTalk)
+2024-11-07 21:45:05 INFO  DingTalkApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-07 21:45:05 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.activation-api.jar,file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.xml.bind-api.jar
+2024-11-07 21:45:05 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/jaxb-core.jar,file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/angus-activation.jar
+2024-11-07 21:45:05 INFO  DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-07 21:45:05 INFO  DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-07 21:45:06 WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.dingtalk]' package. Please check your configuration.
+2024-11-07 21:45:07 INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-07 21:45:07 INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:45:07 INFO  StandardService - Starting service [Tomcat]
+2024-11-07 21:45:07 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-07 21:45:07 INFO  [/] - Initializing Spring embedded WebApplicationContext
+2024-11-07 21:45:07 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1196 ms
+2024-11-07 21:45:08 INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-11-07 21:45:08 INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-07 21:45:08 INFO  QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-11-07 21:45:08 INFO  RAMJobStore - RAMJobStore initialized.
+2024-11-07 21:45:08 INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-07 21:45:08 INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-07 21:45:08 INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-11-07 21:45:08 INFO  QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6454eea7
+2024-11-07 21:45:08 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-07 21:45:08 INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:45:08 INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-07 21:45:08 INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-11-07 21:45:08 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-07 21:45:08 INFO  DingTalkApplication - Started DingTalkApplication in 3.101 seconds (process running for 4.098)
+2024-11-07 21:45:31 INFO  [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-07 21:45:31 INFO  DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-07 21:45:31 INFO  DispatcherServlet - Completed initialization in 1 ms
+2024-11-07 21:45:32 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.ListProcessInstanceIdsResponseBody$ListProcessInstanceIdsResponseBodyResult.nextToken] There are some cast events happening. expect: java.lang.String, but: java.lang.Long, value: 2.
+2024-11-07 21:45:32 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:34 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:36 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:38 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:40 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:43 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:45 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:47 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:45:48 ERROR [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "m" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "m" is null
+	at com.example.dingtalk.controller.TestController.getUser(TestController.java:101) ~[classes/:?]
+	at com.example.dingtalk.controller.TestController.getDetail(TestController.java:45) ~[classes/:?]
+	at com.example.dingtalk.controller.TestController.getInstanceList(TestController.java:81) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.31.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.31.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.31.jar:10.1.31]
+	at java.base/java.lang.Thread.run(Thread.java:833) [?:?]
+2024-11-07 21:46:54 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:46:54 INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-11-07 21:46:54 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-07 21:46:54 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:46:54 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-11-07 21:46:58 INFO  DingTalkApplication - Starting DingTalkApplication using Java 17.0.8 with PID 17768 (D:\项目练习\dingTalk\target\classes started by hp in D:\项目练习\dingTalk)
+2024-11-07 21:46:58 INFO  DingTalkApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-07 21:46:58 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.activation-api.jar,file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.xml.bind-api.jar
+2024-11-07 21:46:58 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/jaxb-core.jar,file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/angus-activation.jar
+2024-11-07 21:46:58 INFO  DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-07 21:46:58 INFO  DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-07 21:46:59 WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.dingtalk]' package. Please check your configuration.
+2024-11-07 21:46:59 INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-07 21:46:59 INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:46:59 INFO  StandardService - Starting service [Tomcat]
+2024-11-07 21:46:59 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-07 21:46:59 INFO  [/] - Initializing Spring embedded WebApplicationContext
+2024-11-07 21:46:59 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1110 ms
+2024-11-07 21:47:01 INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-11-07 21:47:01 INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-07 21:47:01 INFO  QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-11-07 21:47:01 INFO  RAMJobStore - RAMJobStore initialized.
+2024-11-07 21:47:01 INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-07 21:47:01 INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-07 21:47:01 INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-11-07 21:47:01 INFO  QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5e1fece7
+2024-11-07 21:47:01 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-07 21:47:01 INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:47:01 INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-07 21:47:01 INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-11-07 21:47:01 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-07 21:47:01 INFO  DingTalkApplication - Started DingTalkApplication in 2.848 seconds (process running for 3.728)
+2024-11-07 21:47:20 INFO  [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-07 21:47:20 INFO  DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-07 21:47:20 INFO  DispatcherServlet - Completed initialization in 1 ms
+2024-11-07 21:47:22 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.ListProcessInstanceIdsResponseBody$ListProcessInstanceIdsResponseBodyResult.nextToken] There are some cast events happening. expect: java.lang.String, but: java.lang.Long, value: 2.
+2024-11-07 21:47:22 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:22 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:23 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:23 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:23 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:23 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:24 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:24 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:24 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:24 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:25 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:25 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:25 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:25 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:26 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:26 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:26 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:26 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:27 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:47:27 INFO  TeaModel - [com.aliyun.dingtalkworkflow_1_0.models.GetProcessInstanceResponseBody.success] There are some cast events happening. expect: java.lang.String, but: java.lang.Boolean, value: true.
+2024-11-07 21:49:30 INFO  LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-07 21:49:30 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:49:30 INFO  Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:49:30 INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-11-07 21:49:30 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-07 21:49:30 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:49:30 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-11-07 21:49:31 INFO  DingTalkApplication - Starting DingTalkApplication using Java 17.0.8 with PID 17768 (D:\项目练习\dingTalk\target\classes started by hp in D:\项目练习\dingTalk)
+2024-11-07 21:49:31 INFO  DingTalkApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-07 21:49:31 WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.dingtalk]' package. Please check your configuration.
+2024-11-07 21:49:31 INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-07 21:49:31 INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:49:31 INFO  StandardService - Starting service [Tomcat]
+2024-11-07 21:49:31 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-07 21:49:31 INFO  [/] - Initializing Spring embedded WebApplicationContext
+2024-11-07 21:49:31 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 267 ms
+2024-11-07 21:49:32 INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-11-07 21:49:32 INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-07 21:49:32 INFO  QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-11-07 21:49:32 INFO  RAMJobStore - RAMJobStore initialized.
+2024-11-07 21:49:32 INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-07 21:49:32 INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-07 21:49:32 INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-11-07 21:49:32 INFO  QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4051a851
+2024-11-07 21:49:32 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-07 21:49:32 INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-07 21:49:32 INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-07 21:49:32 INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-11-07 21:49:32 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-07 21:49:32 INFO  DingTalkApplication - Started DingTalkApplication in 1.099 seconds (process running for 154.653)
+2024-11-07 21:49:32 INFO  ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-07 21:49:32 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:49:32 INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-11-07 21:49:32 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-07 21:49:32 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 21:49:32 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-11-07 22:06:16 INFO  DingTalkApplication - Starting DingTalkApplication using Java 17.0.8 with PID 32540 (D:\项目练习\dingTalk\target\classes started by hp in D:\项目练习\dingTalk)
+2024-11-07 22:06:16 INFO  DingTalkApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-07 22:06:17 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.activation-api.jar,file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.xml.bind-api.jar
+2024-11-07 22:06:17 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/jaxb-core.jar,file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/angus-activation.jar
+2024-11-07 22:06:17 INFO  DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-07 22:06:17 INFO  DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-07 22:06:17 WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.dingtalk]' package. Please check your configuration.
+2024-11-07 22:06:18 INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-07 22:06:18 INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-07 22:06:18 INFO  StandardService - Starting service [Tomcat]
+2024-11-07 22:06:18 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-07 22:06:18 INFO  [/] - Initializing Spring embedded WebApplicationContext
+2024-11-07 22:06:18 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1075 ms
+2024-11-07 22:06:19 INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-11-07 22:06:19 INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-07 22:06:19 INFO  QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-11-07 22:06:19 INFO  RAMJobStore - RAMJobStore initialized.
+2024-11-07 22:06:19 INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-07 22:06:19 INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-07 22:06:19 INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-11-07 22:06:19 INFO  QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3cb37cca
+2024-11-07 22:06:19 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-07 22:06:19 INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-07 22:06:19 INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-07 22:06:19 INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-11-07 22:06:19 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-07 22:06:19 INFO  DingTalkApplication - Started DingTalkApplication in 2.893 seconds (process running for 3.782)
+2024-11-07 22:06:19 INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-07 22:06:19 ERROR SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'ddlApplicationRunner' is expected to be of type 'org.springframework.boot.Runner' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.adaptBeanInstance(AbstractBeanFactory.java:422) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:403) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:770) [spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.3.5.jar:3.3.5]
+	at com.example.dingtalk.DingTalkApplication.main(DingTalkApplication.java:12) [classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.3.5.jar:3.3.5]
+2024-11-07 22:06:19 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 22:06:19 INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-11-07 22:06:19 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-07 22:06:19 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 22:06:19 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-11-07 22:13:13 INFO  DingTalkApplication - Starting DingTalkApplication using Java 17.0.8 with PID 31204 (D:\项目练习\dingTalk\target\classes started by hp in D:\项目练习\dingTalk)
+2024-11-07 22:13:13 INFO  DingTalkApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-07 22:13:13 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.activation-api.jar,file:/D:/repository/com/sun/xml/bind/jaxb-core/4.0.5/jakarta.xml.bind-api.jar
+2024-11-07 22:13:13 INFO  ChangeableUrls - The Class-Path manifest attribute in D:\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar referenced one or more files that do not exist: file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/jaxb-core.jar,file:/D:/repository/com/sun/xml/bind/jaxb-impl/4.0.5/angus-activation.jar
+2024-11-07 22:13:13 INFO  DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-07 22:13:13 INFO  DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-07 22:13:14 INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-07 22:13:14 INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-07 22:13:14 INFO  StandardService - Starting service [Tomcat]
+2024-11-07 22:13:14 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-07 22:13:14 INFO  [/] - Initializing Spring embedded WebApplicationContext
+2024-11-07 22:13:14 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1033 ms
+2024-11-07 22:13:15 INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+2024-11-07 22:13:15 INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-07 22:13:15 INFO  QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2024-11-07 22:13:15 INFO  RAMJobStore - RAMJobStore initialized.
+2024-11-07 22:13:15 INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-07 22:13:15 INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-07 22:13:15 INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2024-11-07 22:13:15 INFO  QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@60ee240
+2024-11-07 22:13:15 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-07 22:13:15 WARN  TableInfoHelper - Can not find table primary key in Class: "com.example.dingtalk.entity.AllTask".
+2024-11-07 22:13:15 WARN  DefaultSqlInjector - class com.example.dingtalk.entity.AllTask ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-07 22:13:15 INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-07 22:13:15 INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-07 22:13:15 INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+2024-11-07 22:13:15 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-07 22:13:15 INFO  DingTalkApplication - Started DingTalkApplication in 2.911 seconds (process running for 3.67)
+2024-11-07 22:13:15 INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-07 22:13:16 ERROR SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'ddlApplicationRunner' is expected to be of type 'org.springframework.boot.Runner' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.adaptBeanInstance(AbstractBeanFactory.java:422) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:403) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:770) [spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) [spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.3.5.jar:3.3.5]
+	at com.example.dingtalk.DingTalkApplication.main(DingTalkApplication.java:14) [classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.3.5.jar:3.3.5]
+2024-11-07 22:13:16 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 22:13:16 INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+2024-11-07 22:13:16 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-07 22:13:16 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-07 22:13:16 INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.

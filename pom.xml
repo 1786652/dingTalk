@@ -100,6 +100,11 @@
             <artifactId>spring-boot-starter-quartz</artifactId>
             <version>3.1.5</version>
         </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.3.1</version> <!-- 确保使用兼容的 MyBatis-Plus 版本 -->
+        </dependency>
 
     </dependencies>
 

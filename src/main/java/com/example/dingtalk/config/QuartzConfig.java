@@ -22,7 +22,7 @@ public class QuartzConfig {
         return TriggerBuilder.newTrigger()
                 .forJob(myJobDetail())
                 .withIdentity("myTrigger")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * * * * ?")) // 每10秒执行一次
+                .withSchedule(CronScheduleBuilder.cronSchedule("0 0 0 * * ?")) // 每10秒执行一次
                 .build();
     }
 }

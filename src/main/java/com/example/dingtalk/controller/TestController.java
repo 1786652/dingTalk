@@ -42,10 +42,10 @@ public class TestController {
         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> operationRecords = result.getOperationRecords();
         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks> tasks = result.getTasks();
         for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords operationRecord : operationRecords) {
-            operationRecord.setUserId(operationRecord.getUserId()+":"+getUser(operationRecord.getUserId()));
+//            operationRecord.setUserId(operationRecord.getUserId()+":"+getUser(operationRecord.getUserId()));
         }
         for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks task : tasks) {
-            task.setUserId(task.getUserId()+":"+getUser(task.getUserId()));
+//            task.setUserId(task.getUserId()+":"+getUser(task.getUserId()));
         }
         return result;
     }
