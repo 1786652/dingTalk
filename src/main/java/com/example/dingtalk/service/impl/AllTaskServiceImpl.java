@@ -6,11 +6,12 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.dingtalk.entity.AllTask;
 import com.example.dingtalk.mapper.AllTaskMapper;
 import com.example.dingtalk.service.AllTaskService;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Map;
 import java.util.function.Function;
-
+@Service
 public class AllTaskServiceImpl extends ServiceImpl<AllTaskMapper, AllTask> implements AllTaskService {
 
 }
