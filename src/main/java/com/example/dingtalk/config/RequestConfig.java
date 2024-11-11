@@ -22,6 +22,7 @@ public class RequestConfig {
     public String doPost(String uri , String body) throws IOException, InterruptedException {
         builder.POST(HttpRequest.BodyPublishers.ofString(body));
         builder.uri(URI.create(uri));
+        builder.timeout(java.time.Duration.ofSeconds(30));
         HttpRequest request = builder.build();
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         String res = response.body();

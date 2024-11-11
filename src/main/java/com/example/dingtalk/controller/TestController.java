@@ -39,14 +39,7 @@ public class TestController {
         processInstanceRequest.setProcessInstanceId(processInstanceId);
         GetProcessInstanceResponse processInstanceWithOptions = workClient.getProcessInstanceWithOptions(processInstanceRequest, processInstanceHeaders, new RuntimeOptions());
         GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult result = processInstanceWithOptions.body.getResult();
-        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> operationRecords = result.getOperationRecords();
-        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks> tasks = result.getTasks();
-        for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords operationRecord : operationRecords) {
-//            operationRecord.setUserId(operationRecord.getUserId()+":"+getUser(operationRecord.getUserId()));
-        }
-        for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks task : tasks) {
-//            task.setUserId(task.getUserId()+":"+getUser(task.getUserId()));
-        }
+
         return result;
     }
 
@@ -65,7 +58,7 @@ public class TestController {
 
     // 获取所有实例列表
     @RequestMapping("/getInstanceList")
-    public List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> getInstanceList(String processCode,String startTime,String endTime,Long maxResults, Long nextToken) throws Exception {
+    public ListProcessInstanceIdsResponse getInstanceList(String processCode,String startTime,String endTime,Long maxResults, Long nextToken) throws Exception {
         ListProcessInstanceIdsHeaders listProcessInstanceIdsHeaders = new ListProcessInstanceIdsHeaders();
         listProcessInstanceIdsHeaders.setXAcsDingtalkAccessToken(accessToken);
         ListProcessInstanceIdsRequest listProcessInstanceIdsRequest = new ListProcessInstanceIdsRequest();
@@ -75,14 +68,15 @@ public class TestController {
                     listProcessInstanceIdsRequest.setEndTime(new SimpleDateFormat("yyyy-MM-dd").parse(endTime).getTime());
                 }
         ListProcessInstanceIdsResponse listProcessInstanceIdsResponse = workClient.listProcessInstanceIdsWithOptions(listProcessInstanceIdsRequest, listProcessInstanceIdsHeaders, new RuntimeOptions());
-        List<String> list = listProcessInstanceIdsResponse.getBody().getResult().getList();
-        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> resList = new ArrayList<>();
-        for (String s : list) {
-            GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult detail = getDetail(s);
-            resList.add(detail);
-        }
-
-        return resList;
+//        List<String> list = listProcessInstanceIdsResponse.getBody().getResult().getList();
+//        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> resList = new ArrayList<>();
+//        for (String s : list) {
+//            GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult detail = getDetail(s);
+//            resList.add(detail);
+//        }
+//
+//        return resList;
+        return listProcessInstanceIdsResponse;
     }
     // 获取用户信息
     @RequestMapping("/getUser")
