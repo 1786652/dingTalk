@@ -9,28 +9,6 @@ import java.util.Date;
 @TableName("signet")
 @Data
 public class Signet {
-    //用章部门
-    private String section;
-    //经办人
-    private String agent;
-    //日期
-    private String date;
-    //材料文件名称
-    private String materialFileName;
-    //文件份数
-    private String documentNum;
-    //文件类别
-    private String documentType;
-    //用章名称
-    private String sealName;
-    //用章类型
-    private String sealType;
-    //党章名称
-    private String churchName;
-    //备注
-    private String remark;
-    //附件
-    private String attachments;
     //表单ID
     private String processCode;
     @TableId(value="business_id",type = IdType.INPUT)
@@ -46,4 +24,12 @@ public class Signet {
     private String taskUsername;
     //实例id
     private String processInstanceId;
+    //流程
+    private String flow;
+    //抄送人
+    private String ccUserIds;
+    // 发起人
+    private String originatorUserId;
+    // 部门名
+    private String depName;
 }

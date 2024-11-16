@@ -10,6 +10,9 @@ import com.aliyun.teaopenapi.models.Config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Configuration
 public class DingTalkeConfig {
 
@@ -22,6 +25,7 @@ public class DingTalkeConfig {
             throw new RuntimeException(e);
         }
     }
+
 
     @Bean
     public Client dingClient() throws Exception{

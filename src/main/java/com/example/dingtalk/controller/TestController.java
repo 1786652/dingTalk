@@ -58,7 +58,7 @@ public class TestController {
 
     // 获取所有实例列表
     @RequestMapping("/getInstanceList")
-    public ListProcessInstanceIdsResponse getInstanceList(String processCode,String startTime,String endTime,Long maxResults, Long nextToken) throws Exception {
+    public List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> getInstanceList(String processCode,String startTime,String endTime,Long maxResults, Long nextToken) throws Exception {
         ListProcessInstanceIdsHeaders listProcessInstanceIdsHeaders = new ListProcessInstanceIdsHeaders();
         listProcessInstanceIdsHeaders.setXAcsDingtalkAccessToken(accessToken);
         ListProcessInstanceIdsRequest listProcessInstanceIdsRequest = new ListProcessInstanceIdsRequest();
@@ -68,15 +68,14 @@ public class TestController {
                     listProcessInstanceIdsRequest.setEndTime(new SimpleDateFormat("yyyy-MM-dd").parse(endTime).getTime());
                 }
         ListProcessInstanceIdsResponse listProcessInstanceIdsResponse = workClient.listProcessInstanceIdsWithOptions(listProcessInstanceIdsRequest, listProcessInstanceIdsHeaders, new RuntimeOptions());
-//        List<String> list = listProcessInstanceIdsResponse.getBody().getResult().getList();
-//        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> resList = new ArrayList<>();
-//        for (String s : list) {
-//            GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult detail = getDetail(s);
-//            resList.add(detail);
-//        }
-//
-//        return resList;
-        return listProcessInstanceIdsResponse;
+        List<String> list = listProcessInstanceIdsResponse.getBody().getResult().getList();
+        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> resList = new ArrayList<>();
+        for (String s : list) {
+            GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult detail = getDetail(s);
+            resList.add(detail);
+        }
+
+        return resList;
     }
     // 获取用户信息
     @RequestMapping("/getUser")
@@ -124,5 +123,10 @@ public class TestController {
                         , new GetManageProcessByStaffIdHeaders().setXAcsDingtalkAccessToken(accessToken)
                         ,new RuntimeOptions());
         return manageProcessByStaffIdWithOptions.getBody().getResult();
+    }
+
+    @RequestMapping("/getTaskList")
+    public List<Object> getTaskList(String getInstanceList){
+        return null;
     }
 }

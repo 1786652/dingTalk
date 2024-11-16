@@ -1,13 +1,18 @@
 package com.example.dingtalk.job;
 
+import com.aliyun.dingtalkoauth2_1_0.Client;
+import com.aliyun.dingtalkoauth2_1_0.models.GetAccessTokenRequest;
+import com.aliyun.dingtalkoauth2_1_0.models.GetAccessTokenResponse;
 import com.aliyun.dingtalkworkflow_1_0.models.*;
 import com.aliyun.tea.utils.StringUtils;
+import com.aliyun.teaopenapi.models.Config;
 import com.aliyun.teautil.models.RuntimeOptions;
 import com.example.dingtalk.config.RequestConfig;
-import com.example.dingtalk.entity.AllTask;
+import com.example.dingtalk.entity.ApprovalCustomField;
 import com.example.dingtalk.entity.Signet;
 import com.example.dingtalk.entity.TitleTab;
 import com.example.dingtalk.service.AllTaskService;
+import com.example.dingtalk.service.ApprovalCustomFieldService;
 import com.example.dingtalk.service.SignetService;
 import com.example.dingtalk.service.TitleService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,19 +26,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAccessor;
 import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
-public class RefreshJob implements Job {
+public class RefreshJob2 implements Job {
     @Resource(name = "accessToken")
     private String accessToken;
 
@@ -44,20 +42,22 @@ public class RefreshJob implements Job {
     private RequestConfig requestConfig;
 
     @Autowired
-    private AllTaskService allTaskService;
-
-    @Autowired
     private TitleService titleService;
 
     @Autowired
     private SignetService signetService;
 
-    private static final Logger logger = LogManager.getLogger(RefreshJob.class);
+    @Autowired
+    private ApprovalCustomFieldService customFieldService;
+
+    private static final Logger logger = LogManager.getLogger(RefreshJob2.class);
 
     private List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> resList = new ArrayList<>();
 
     private long now = System.currentTimeMillis();
-    private int count = 0;
+
+    private String depName;
+
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -79,26 +79,28 @@ public class RefreshJob implements Job {
             }
             titleService.saveOrUpdateBatch(titleTabs);
             logger.debug("getPullDown End");
-            List<Signet> signetList = new ArrayList<>();
+            List<Signet> signetList;
             Signet signetTask;
             for (GetManageProcessByStaffIdResponseBody.GetManageProcessByStaffIdResponseBodyResult pullDown : formList) {
                 String processCode = pullDown.getProcessCode();
-                if ("PROC-02440ACA-59DC-425D-A510-ACC8FF08FD8D".equals(processCode)){
+                    signetList = new ArrayList<>();
                     // 获取当前表单的所有审批单
                     List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> instanceList = getInstanceList(processCode, 20L, 0L,null);
-                    logger.debug(count);
+                    // 循环获取每个审批单的详情
                     for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult task : instanceList) {
                         signetTask = new Signet();
                         signetTask.setProcessCode(processCode);
                         signetTask.setBusinessId(task.getBusinessId());
                         signetTask.setTitle(task.getTitle());
                         signetTask.setCreateTime(sdf.parse(task.getCreateTime()));
+
                         if(!StringUtils.isEmpty(task.getFinishTime())){
                             signetTask.setFinishTime(sdf.parse(task.getFinishTime()));
                         }
                         else {
                             signetTask.setFinishTime(null);
                         }
+                        signetTask.setOriginatorUserId(task.getOriginatorUserId());
                         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks> tasks = task.getTasks();
                         StringJoiner stringJoiner = new StringJoiner(",");
                         for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks task1 : tasks){
@@ -116,44 +118,18 @@ public class RefreshJob implements Job {
                         signetTask.setProcessInstanceId(processInstanceId);
                         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultFormComponentValues> formComponentValues = task.getFormComponentValues();
                         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultFormComponentValues> columnAndValues = formComponentValues;
-//                        for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultFormComponentValues columnAndValue : columnAndValues) {
-//                            String name = columnAndValue.getName();
-//                            switch (name){
-//                                case "经办人":
-//                                    signetTask.setAgent(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "用章部门":
-//                                    signetTask.setSection(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "日期":
-//                                    signetTask.setDate(name + ":" + new SimpleDateFormat("yyyy-MM-dd").parse(columnAndValue.getValue()));
-//                                    break;
-//                                case "用章材料文件名称":
-//                                    signetTask.setMaterialFileName(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "文件份数":
-//                                    signetTask.setDocumentNum(name + ":" +Integer.parseInt(columnAndValue.getValue()));
-//                                    break;
-//                                case "文件类别":
-//                                    signetTask.setDocumentType(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "用章名称":
-//                                    signetTask.setSealName(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "用章类型":
-//                                    signetTask.setSealType(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "党章名称":
-//                                    signetTask.setChurchName(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "备注":
-//                                    signetTask.setRemark(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                                case "附件":
-//                                    signetTask.setAttachments(name + ":" +columnAndValue.getValue());
-//                                    break;
-//                            }
-//                        }
+                        String finalProcessInstanceId = processInstanceId;
+                        ArrayList<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultFormComponentValues> collect2 = columnAndValues
+                                .stream().filter(o -> !StringUtils.isEmpty(o.getValue())).collect(Collectors.toCollection(ArrayList::new));
+                        ArrayList<ApprovalCustomField> collect1 = collect2.stream().map(o -> {
+                            ApprovalCustomField approvalCustomField = new ApprovalCustomField();
+                            approvalCustomField.setFieldName(o.getName());
+                            approvalCustomField.setFieldValue(o.getValue());
+                            approvalCustomField.setProcessInstanceId(finalProcessInstanceId);
+                            approvalCustomField.setId(o.getId()+finalProcessInstanceId);
+                            return approvalCustomField;
+                        }).collect(Collectors.toCollection(ArrayList::new));
+                        customFieldService.saveOrUpdateBatch(collect1);
                         StringJoiner sj = new StringJoiner(",");
                         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> operationRecords = task.getOperationRecords();
                         ArrayList<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> collect = operationRecords.stream().filter(o ->
@@ -168,11 +144,11 @@ public class RefreshJob implements Job {
                         ArrayList<String> flows = operationRecords.stream().map(o -> o.getShowName() + ":" + o.getUserId()).collect(Collectors.toCollection(ArrayList::new));
                         flows.forEach(sj::add);
                         signetTask.setFlow(sj.toString());
+                        signetTask.setDepName(depName);
                         signetList.add(signetTask);
                     }
-
                     signetService.saveOrUpdateBatch(signetList,100);
-                }
+                accessToken = accessToken();
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -190,16 +166,12 @@ public class RefreshJob implements Job {
     }
     // 获取实例list
     private List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult> getInstanceList(String processCode, Long maxResults, Long nextToken,Long startTime) throws Exception {
-        count++;
         ListProcessInstanceIdsHeaders listProcessInstanceIdsHeaders = new ListProcessInstanceIdsHeaders();
         listProcessInstanceIdsHeaders.setXAcsDingtalkAccessToken(accessToken);
         ListProcessInstanceIdsRequest listProcessInstanceIdsRequest = new ListProcessInstanceIdsRequest();
         ArrayList<String> status = new ArrayList<>();
         status.add("COMPLETED");
         if(startTime == null){
-                   /* DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // 定义日期格式
-                    LocalDate localDate = LocalDate.parse("2021-01-01", formatter); // 解析日期字符串
-                    startTime = localDate.atStartOfDay().toInstant(ZoneOffset.UTC).toEpochMilli(); // 转换为毫秒时间戳*/
                     startTime = now - 31449600000L;
             listProcessInstanceIdsRequest.setProcessCode(processCode).setMaxResults(maxResults).setNextToken(nextToken).setStartTime(startTime).setStatuses(status);
                 }else {
@@ -214,9 +186,6 @@ public class RefreshJob implements Job {
         ListProcessInstanceIdsResponse listProcessInstanceIdsResponse = workClient.listProcessInstanceIdsWithOptions(listProcessInstanceIdsRequest, listProcessInstanceIdsHeaders, new RuntimeOptions());
         List<String> list = listProcessInstanceIdsResponse.getBody().getResult().getList();
         String nextToken1 = listProcessInstanceIdsResponse.getBody().getResult().getNextToken();
-        System.out.println("startTime:" + new Date(startTime));
-        System.out.println("endTime:" + new Date(endTime));
-        System.out.println("nextToken1:" + nextToken1);
         for (String processInstanceId : list) {
             GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult detail = getDetail(processInstanceId);
             resList.add(detail);
@@ -225,8 +194,6 @@ public class RefreshJob implements Job {
             getInstanceList(processCode,maxResults,Long.valueOf(nextToken1),startTime);
         }else if (nextToken1 == null && endTime < now){
             getInstanceList(processCode,maxResults,Long.valueOf(0L),endTime);
-        }else{
-            System.out.println("......");
         }
         return resList;
     }
@@ -239,6 +206,7 @@ public class RefreshJob implements Job {
         GetProcessInstanceResponse processInstanceWithOptions = workClient.getProcessInstanceWithOptions(processInstanceRequest, processInstanceHeaders, new RuntimeOptions());
         GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult result = processInstanceWithOptions.body.getResult();
         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> operationRecords = result.getOperationRecords();
+        depName = result.getOriginatorDeptName();
         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks> tasks = result.getTasks();
 //        for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords operationRecord : operationRecords) {
 //            operationRecord.setUserId(operationRecord.getUserId()+":"+getUser(operationRecord.getUserId()));
@@ -268,5 +236,14 @@ public class RefreshJob implements Job {
         }
 
         return name;
+    }
+
+    public String accessToken() throws Exception {
+        Client client = new Client(new Config().setProtocol("https").setRegionId("central"));
+        GetAccessTokenResponse accessTokenResponse = client.getAccessToken(new GetAccessTokenRequest()
+                .setAppKey("dingb1cmlolkaqutjzk1")
+                .setAppSecret("hmQuT_VRkQwsw7fyMfrF4gAVIArkL8NhjGoXCc42wdfqN8TmyIrqK8mt5nyQxYFn"));
+        accessToken = accessTokenResponse.getBody().getAccessToken();
+        return accessToken;
     }
 }
