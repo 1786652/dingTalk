@@ -95,8 +95,8 @@ public class TestController {
         return name;
     }
 
-    @RequestMapping("/getFile")
-    public GrantProcessInstanceForDownloadFileResponse getFile() throws Exception {
+    @RequestMapping("/getFile1")
+    public GrantProcessInstanceForDownloadFileResponse getFile(String processInstanceId,String FileId) throws Exception {
 
         GrantProcessInstanceForDownloadFileHeaders grantProcessInstanceForDownloadFileHeaders = new GrantProcessInstanceForDownloadFileHeaders();
         grantProcessInstanceForDownloadFileHeaders.setXAcsDingtalkAccessToken(accessToken);

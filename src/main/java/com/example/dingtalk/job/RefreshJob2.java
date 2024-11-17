@@ -56,7 +56,6 @@ public class RefreshJob2 implements Job {
 
     private long now = System.currentTimeMillis();
 
-    private String depName;
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
@@ -104,7 +103,7 @@ public class RefreshJob2 implements Job {
                         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks> tasks = task.getTasks();
                         StringJoiner stringJoiner = new StringJoiner(",");
                         for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks task1 : tasks){
-                            stringJoiner.add(task1.getUserId()+":"+task1.getResult());
+                            stringJoiner.add(task1.getUserId());
                         }
                         String processInstanceId = "";
                         signetTask.setTaskUsername(stringJoiner.toString());
@@ -126,10 +125,11 @@ public class RefreshJob2 implements Job {
                             approvalCustomField.setFieldName(o.getName());
                             approvalCustomField.setFieldValue(o.getValue());
                             approvalCustomField.setProcessInstanceId(finalProcessInstanceId);
-                            approvalCustomField.setId(o.getId()+finalProcessInstanceId);
+                            approvalCustomField.setBusinessId(task.getBusinessId());
+                            approvalCustomField.setProcessCode(processCode);
                             return approvalCustomField;
                         }).collect(Collectors.toCollection(ArrayList::new));
-                        customFieldService.saveOrUpdateBatch(collect1);
+                        customFieldService.saveBatch(collect1);
                         StringJoiner sj = new StringJoiner(",");
                         List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> operationRecords = task.getOperationRecords();
                         ArrayList<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> collect = operationRecords.stream().filter(o ->
@@ -144,10 +144,10 @@ public class RefreshJob2 implements Job {
                         ArrayList<String> flows = operationRecords.stream().map(o -> o.getShowName() + ":" + o.getUserId()).collect(Collectors.toCollection(ArrayList::new));
                         flows.forEach(sj::add);
                         signetTask.setFlow(sj.toString());
-                        signetTask.setDepName(depName);
+                        signetTask.setDepName(task.getOriginatorDeptName());
                         signetList.add(signetTask);
                     }
-                    signetService.saveOrUpdateBatch(signetList,100);
+                    signetService.saveBatch(signetList,100);
                 accessToken = accessToken();
             }
         } catch (Exception e) {
@@ -205,15 +205,6 @@ public class RefreshJob2 implements Job {
         processInstanceRequest.setProcessInstanceId(processInstanceId);
         GetProcessInstanceResponse processInstanceWithOptions = workClient.getProcessInstanceWithOptions(processInstanceRequest, processInstanceHeaders, new RuntimeOptions());
         GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResult result = processInstanceWithOptions.body.getResult();
-        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords> operationRecords = result.getOperationRecords();
-        depName = result.getOriginatorDeptName();
-        List<GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks> tasks = result.getTasks();
-//        for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultOperationRecords operationRecord : operationRecords) {
-//            operationRecord.setUserId(operationRecord.getUserId()+":"+getUser(operationRecord.getUserId()));
-//        }
-//        for (GetProcessInstanceResponseBody.GetProcessInstanceResponseBodyResultTasks task : tasks) {
-//            task.setUserId(task.getUserId()+":"+getUser(task.getUserId()));
-//        }
         return result;
     }
     private String getUser(String userId) throws Exception {
